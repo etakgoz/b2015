@@ -33,7 +33,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="container">
+				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
 							<p class="section-title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum, neque debitis distinctio quasi sit quibusdam, itaque possimus fuga et dolorem soluta dolore rerum? Quo eum, voluptatem earum provident facere.</p>
@@ -174,7 +174,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="container">
+				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
 							<p class="section-title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum, neque debitis distinctio quasi sit quibusdam, itaque possimus fuga et dolorem soluta dolore rerum? Quo eum, voluptatem earum provident facere.</p>

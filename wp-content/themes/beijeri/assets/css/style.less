@@ -1798,7 +1798,14 @@
 	/* Section Header */
 	.section-header {
 		&.page-header {
-			margin: 160px auto 0;
+			margin: 120px auto 0;
+			@media (max-width: @screen-desktop) {
+				margin: 140px auto 0;
+			}
+
+			@media (max-width:@screen-tablet) {
+				margin: 100px auto 0;
+			}
 		}
 
 		.section-title {

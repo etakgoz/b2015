@@ -33,7 +33,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="container">
+				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
 							<p class="section-title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum, neque debitis distinctio quasi sit quibusdam, itaque possimus fuga et dolorem soluta dolore rerum? Quo eum, voluptatem earum provident facere.</p>
@@ -43,30 +43,14 @@ get_header(); ?>
 			</div>
 
 			<section class="companies mt30">
-				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
+				<div class="container company mb40">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="comapany-info clearfix">
-								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
-								<div style="margin-left: 250px">
-									<h3>Fjäraskupan</h3>
-									<p>Some tagline</p>
-									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="comapany-info clearfix">
-								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
-								<div style="margin-left: 250px">
-									<h3>Fjäraskupan</h3>
-									<p>Some tagline</p>
+							<div class="company-info clearfix">
+								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div class="info-container">
+									<h3 class="company-name">Fjäraskupan</h3>
+									<p class="tagline">Some tagline</p>
 									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
 								</div>
 							</div>
@@ -74,14 +58,29 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
+				<div class="container company mb40">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="comapany-info clearfix">
-								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
-								<div style="margin-left: 250px">
-									<h3>Fjäraskupan</h3>
-									<p>Some tagline</p>
+							<div class="company-info clearfix">
+								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div class="info-container">
+									<h3 class="company-name">Fjäraskupan</h3>
+									<p class="tagline">Some tagline</p>
+									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container company mb40">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="company-info clearfix">
+								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div class="info-container">
+									<h3 class="company-name">Fjäraskupan</h3>
+									<p class="tagline">Some tagline</p>
 									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
 								</div>
 							</div>
