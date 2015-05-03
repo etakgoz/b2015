@@ -170,9 +170,9 @@
 				});
 			},
 			unbindEvents: function() {
-				menu.find("li, a").off();
-				$(document).off("click.menu touchstart.menu");
-				menu.find(".sub-menu, .megamenu").hide(0);
+				// menu.find("li, a").off();
+				// $(document).off("click.menu touchstart.menu");
+				// menu.find(".sub-menu, .megamenu").hide(0);
 			}
 		}; // END Megamenu object
 
@@ -211,7 +211,6 @@
 
 
 /* *********************	Fixed Header	********************* */
-
 	function fixedHeader() {
       	$(".main-header").sticky({
       		topSpacing: 0,
@@ -222,6 +221,12 @@
 	if ( (!$('.static-menu').length) && ($windowWidth > 991) && (!isMobileDevice) ) {
 		fixedHeader();
 	}
+
+	$(window).on('resize', function () {
+		if ( (!$('.static-menu').length) && ($windowWidth > 991) && (!isMobileDevice) ) {
+			fixedHeader();
+		}
+	})
 
 
 
