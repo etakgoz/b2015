@@ -212,6 +212,7 @@
 
 /* *********************	Fixed Header	********************* */
 	function fixedHeader() {
+		console.log(1)
       	$(".main-header").sticky({
       		topSpacing: 0,
       		className:"menu-fixed"
