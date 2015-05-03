@@ -7,6 +7,14 @@ make the submenu
 
 om oss page - try to do it without no design
 
-ledning page
 
-- add the site codes to the github
+make company post type
+
+make company page
+
+new ledning page
+
+
+footer must be dynamic
+
+- add the site codes to the github (done)
