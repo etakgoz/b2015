@@ -212,7 +212,6 @@
 
 /* *********************	Fixed Header	********************* */
 	function fixedHeader() {
-		console.log(1)
       	$(".main-header").sticky({
       		topSpacing: 0,
       		className:"menu-fixed"
@@ -222,13 +221,6 @@
 	if ( (!$('.static-menu').length) && ($windowWidth > 991) && (!isMobileDevice) ) {
 		fixedHeader();
 	}
-
-	$(window).on('resize', function () {
-		if ( (!$('.static-menu').length) && ($windowWidth > 991) && (!isMobileDevice) ) {
-			fixedHeader();
-		}
-	})
-
 
 
 /* *********************	Slider config	********************* */
@@ -1083,7 +1075,10 @@
 				$(".main-header").unstick();
 				$(".sticky-wrapper").css("height","auto");
 			} else {
-				fixedHeader();
+				if (!$(".sticky-wrapper").length) {
+					fixedHeader();
+				}
+
 				$(".sticky-wrapper").css("height","76px");
 			}
 
