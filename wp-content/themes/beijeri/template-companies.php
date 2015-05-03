@@ -42,13 +42,48 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<section class="companies">
-				<div class="container">
+			<section class="companies mt30">
+				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
 					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2">
+						<div class="col-sm-12">
 							<div class="comapany-info clearfix">
-								<div class="pull-left"><img src=""></div>
-								<div class="pull-right"></div>
+								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div style="margin-left: 250px">
+									<h3>Fjäraskupan</h3>
+									<p>Some tagline</p>
+									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="comapany-info clearfix">
+								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div style="margin-left: 250px">
+									<h3>Fjäraskupan</h3>
+									<p>Some tagline</p>
+									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container company mb40" style="border-bottom: solid 1px #dcdcdc; padding-bottom: 40px;">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="comapany-info clearfix">
+								<div class="pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div style="margin-left: 250px">
+									<h3>Fjäraskupan</h3>
+									<p>Some tagline</p>
+									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
+								</div>
 							</div>
 						</div>
 					</div>
