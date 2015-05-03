@@ -47,7 +47,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-sm-8 col-sm-offset-2">
 							<div class="comapany-info clearfix">
-								<div class="pull-left"><img src=""></div></div>
+								<div class="pull-left"><img src=""></div>
 								<div class="pull-right"></div>
 							</div>
 						</div>
