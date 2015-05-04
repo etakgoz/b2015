@@ -10,6 +10,30 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<div class="section-header page-header">
+			<div class="page-breadcrumbs-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="pull-left">
+								<div class="page-breadcrumbs" style="padding-left: 0;">
+									<a href="#">Hem</a> <span class="separator"> / </span> Nyheter
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="section-title">Nyheter</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -25,7 +49,19 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<?php the_posts_navigation(array(
+							'prev_text' => '&lt;&lt; Äldre inlägg',
+							'next_text' => 'Nyare inlägg &gt;&gt;',
+							'screen_reader_text' => ''
+						)); ?>
+					</div>
+				</div>
+			</div>
+
+
 
 		<?php else : ?>
 

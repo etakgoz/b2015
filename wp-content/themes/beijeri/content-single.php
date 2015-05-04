@@ -9,7 +9,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 col-sm-8">
-					<h1 class="intro-title mb20">Pressmeddelande</h1>
+					<h1 class="intro-title mb20"><?php the_title(); ?></h1>
+					<p style="margin-top: -15px;"><small><?php beijeri_posted_on(); ?></small></p>
 					<!--<p class="intro-p mb30">Firskt vatten på jobbet</p>-->
 					<div id="shareit" class="sharrre" data-url="" data-text="Make your sharing widget with Sharrre (jQuery Plugin)" data-title="Share"></div>
 				</div>
@@ -36,8 +37,8 @@
 			<div class="container">
 				<div class="row">
 						<div class="col-sm-8 col-sm-offset-2">
-							<?php the_title( '<h3 class="blog-post-title">', '</h3>' ); ?>
-							<p><small><?php beijeri_posted_on(); ?></small></p>
+							<!--<?php the_title( '<h3 class="blog-post-title">', '</h3>' ); ?>-->
+
 						</div>
 					</div>
 			</div>

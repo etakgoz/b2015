@@ -3,46 +3,6 @@
 
 		<div class="tp-banner">
 			<ul>
-				<!-- SLIDE 1 -->
-				<li data-transition="fade" data-masterspeed="500" data-slotamount="7" data-delay="8000" data-title="Beijerinvest">
-					<!-- Background Image -->
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero/strandvagen.1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="">
-
-					<!-- Include bg-overlay class if you want some background overlay over the image -->
-					<!-- Recomend to include it to have a dark overlay and change the opacity (op6, op4, op8 etc) so that the content inside to be visible and readalbe (text is white) -->
-					<div class="bg-overlay op5"></div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="-75" 
-							data-speed="600" data-start="600"
-							data-endspeed="400" data-end="7900"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h3 class="title-slider-small uppercased mb50">Beijerinvest</h3>
-						</div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="30" 
-							data-speed="700" data-start="800"
-							data-endspeed="500" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h2 class="title-slider-large larger">Beijeri satsar på<br/> toppbolag</h2>
-						</div>
-
-						<div class="tp-caption sfb stl"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="120" 
-							data-speed="900" data-start="1200"
-							data-endspeed="600" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<a href="<?php echo get_site_url(); ?>/?page_id=12" class="btn-slider">läs mer</a>
-						</div>
-
-				</li>
 
 				<!-- SLIDE 2 -->
 				<li data-transition="fade" data-slotamount="7" data-delay="8000" data-title="Vattentornet">
@@ -310,48 +270,43 @@
 		</div>
 	</section>
 
+	<?php 
+		$posts = get_posts(array('posts_per_page' => 3));
+	?>
+
+	<?php if ( !empty( $posts ) ): ?>
 	<section>
 		<div class="container mb50 mt20">
 			<div class="row mb30">
 				<div class="col-sm-12">
 					<div class="clearfix">
 						<h3 class="title-medium br-bottom pull-left">Nyheter</h3>
-						<h3 class="title-small pull-right"><a href="#">Se Alla Pressmeddlande</a></h3>
+						<h3 class="title-small pull-right"><a href="<?php echo get_site_url(); ?>/nyheter">Se Alla Nyheter</a></h3>
 					</div>
 				</div>
 			</div>
 			<div class="row mb30">
+				<?php 
+					foreach ($posts as $post) {
+						setup_postdata( $post );
+						$excerpt = get_the_excerpt();
 
-				<div class="col-md-4">
-					<div class="box-services-b">
-						<h3 class="title-small mb0">Pressmeddelande <a href="#" class="link-read-more xs-mt0">läs mer</a></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore odio culpa laboriosam reprehenderit excepturi, ducimus labore saepe modi deserunt nostrum dolores quasi.</p>
-						<small><i class="fa fa-clock-o mr10"></i> 15 April 2015</small>
-						<span class="py10"> / </span>
-						<small><a href="#">Johan Wall</a></small>
-					</div>
-				</div><!--./col-md-4-->
-
-				<div class="col-md-4">
-					<div class="box-services-b">
-						<h3 class="title-small mb0">Pressmeddelande <a href="#" class="link-read-more xs-mt0">läs mer</a></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse magni, unde, voluptatibus, aspernatur illum ipsa consectetur officia repudiandae quibusdam enim similique omnis.</p>
-						<small><i class="fa fa-clock-o mr10"></i> 10 April 2015</small>
-						<span class="py10"> / </span>
-						<small><a href="#">Beijerinvest</a></small>
-					</div>
-				</div><!--./col-md-4-->
-
-				<div class="col-md-4">
-					<div class="box-services-b">
-						<h3 class="title-small mb0">Pressmeddelande <a href="#" class="link-read-more xs-mt0">läs mer</a></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat delectus in vitae obcaecati quibusdam porro nihil reiciendis aut placeat doloribus, qui est? Modi, culpa, suscipit adipisci doloribus quo dolor eum.</p>
-						<small><i class="fa fa-clock-o mr10"></i> 2 April 2015</small>
-						<span class="py10"> / </span>
-						<small><a href="#">Beijerinvest</a></small>
-					</div>
-				</div><!--./col-md-4-->
+						$postDate = $post->post_date;
+						$postDate = date("d M Y", time($postDate));
+				?>
+					<div class="col-md-4">
+						<div class="box-services-b">
+							<h3 class="title-small mb0"><?php echo $post->post_title; ?><a href="#" class="link-read-more xs-mt0">läs mer</a></h3>
+							<p><?php echo $excerpt; ?></p>
+							<small><i class="fa fa-clock-o mr10"></i><?php echo $postDate; ?></small>
+							<!--<span class="py10"> / </span>
+							<small><a href="#">Johan Wall</a></small>-->
+						</div>
+					</div><!--./col-md-4-->
+				<?php
+					}
+				?>
 			</div>
 		</div>
-
 	</section>
+	<?php endif; ?>
