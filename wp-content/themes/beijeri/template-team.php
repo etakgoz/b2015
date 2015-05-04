@@ -11,6 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="section-header page-header">
+				<a name="<?php the_field('ledning_anchor'); ?>"></a>
+
 <!-- 				<div class="page-breadcrumbs-wrapper">
 					<div class="container">
 						<div class="row">
@@ -93,7 +95,7 @@ get_header(); ?>
 			</section>
 
 			<div class="section-header">
-
+				<a name="<?php the_field('styrelse_anchor'); ?>"></a>
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">

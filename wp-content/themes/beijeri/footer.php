@@ -34,18 +34,30 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-3">
-					<div class="footer-widget">
-						<h3 class="footer-title">Kontakt</h3>
-						<p>Investeringar</p>
-						<p>Erik Gustaffson</p>
-						<p><a href="mailto:erik.gustafsson@beijerinvest.se">erik.gustafsson@beijerinvest.se</a></p>
-						<p>Tel: +46 8 701 08 15</p>
-						<p>Mob: +46 70 921 88 08</p>
+				<?php
+				if( have_rows('kontakt') ):
+					$loop = 0;
+				 	// loop through the rows of data
+				    while ( have_rows('kontakt') ) : the_row();
+				?>
+					<div class="col-sm-6 col-md-3">
+						<div class="footer-widget <?php if ($loop == 1) echo 'mt60' ?>" <?php if ($loop == 1) echo 'style="padding-top: 5px;"' ?>>
+							<?php if ($loop == 0) : ?>
+							<h3 class="footer-title">Kontakt</h3>
+							<?php endif; ?>
+							<p><?php the_sub_field('type');?></p>
+							<p><?php the_sub_field('name');?></p>
+							<p><a href="mailto:<?php the_sub_field('email');?>"><?php the_sub_field('email');?></a></p>
+							<p>Tel: <?php the_sub_field('landline');?></p>
+							<p>Mob: <?php the_sub_field('mobile');?></p>
+						</div>
 					</div>
-				</div>
-
-				<div class="col-sm-6 col-md-3">
+				<?php
+					$loop++;
+					endwhile;
+				endif;
+				?>
+				<!--<div class="col-sm-6 col-md-3">
 					<div class="footer-widget mt60" style="padding-top: 5px">
 						<p>Övriga frågor</p>
 						<p>Johan Wall</p>
@@ -53,7 +65,7 @@
 						<p>Tel: +46 8 701 08 17</p>
 						<p>Mob: +46 70 554 18 00</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="row">
 				<div class="col-sm-6 col-md-4">
