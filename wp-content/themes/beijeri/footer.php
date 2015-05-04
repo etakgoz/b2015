@@ -35,10 +35,11 @@
 				</div>
 
 				<?php
-				if( have_rows('kontakt') ):
+				if( have_rows('kontakt', 'options') ):
 					$loop = 0;
+
 				 	// loop through the rows of data
-				    while ( have_rows('kontakt') ) : the_row();
+				    while ( have_rows('kontakt', 'options') ) : the_row();
 				?>
 					<div class="col-sm-6 col-md-3">
 						<div class="footer-widget <?php if ($loop == 1) echo 'mt60' ?>" <?php if ($loop == 1) echo 'style="padding-top: 5px;"' ?>>
