@@ -38,7 +38,7 @@ get_header(); ?>
 				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
-							<p class="section-title-text"><?php the_field('ledning_details'); ?></p>
+							<div class="section-title-text"><?php the_field('ledning_details'); ?></div>
 						</div>
 					</div>
 				</div>
@@ -107,7 +107,7 @@ get_header(); ?>
 				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
-							<p class="section-title-text"><?php the_field('styrelse_details'); ?></p>
+							<div class="section-title-text"><?php the_field('styrelse_details'); ?></div>
 						</div>
 					</div>
 				</div>
@@ -121,9 +121,10 @@ get_header(); ?>
 
 						// check if the repeater field has rows of data
 						if( have_rows('styrelse_members') ):
-
+							$loop = 0;
 						 	// loop through the rows of data
 						    while ( have_rows('styrelse_members') ) : the_row();
+						    	$loop++;
 						?>
 
 							<div class="col-sm-6 col-md-4">

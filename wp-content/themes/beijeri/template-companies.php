@@ -36,58 +36,54 @@ get_header(); ?>
 				<div class="container mt20">
 					<div class="row">
 						<div class="col-sm-12">
-							<p class="section-title-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi earum, neque debitis distinctio quasi sit quibusdam, itaque possimus fuga et dolorem soluta dolore rerum? Quo eum, voluptatem earum provident facere.</p>
+							<div class="section-title-text"><?php the_field('page_info'); ?></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
+			<?php 
+				$posts = get_posts(array('post_type' => 'bolag', 'posts_per_page' => 20));
+			?>
+
+			<?php if ( !empty( $posts ) ) { ?>
+
 			<section class="companies mt30">
+				<?php
+					foreach ($posts as $post) {
+						setup_postdata( $post );
+						$excerpt = neatTrim(strip_tags($post->post_content), 250);
+						$permalink = get_permalink();
+
+						$postDate = $post->post_date;
+						$postDate = date("d M Y", time($postDate));
+
+						$image = get_field('company_logo');
+
+						if (!empty($image)) {
+							$imageUrl = $image["url"];
+						}
+				?>
+
 				<div class="container company mb40">
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="company-info clearfix">
-								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
+								<div class="logo-container pull-left"><a href="<?php echo $permalink; ?>"><img src="<?php echo $imageUrl; ?>" alt="logo"/></a></div>
 								<div class="info-container">
-									<h3 class="company-name">Fjäraskupan</h3>
-									<p class="tagline">Some tagline</p>
-									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
+									<h3 class="company-name"><?php the_title(); ?></h3>
+									<p class="tagline"><?php the_field('tagline'); ?></p>
+									<div class="description"><?php the_field('short_description'); ?></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="container company mb40">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="company-info clearfix">
-								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
-								<div class="info-container">
-									<h3 class="company-name">Fjäraskupan</h3>
-									<p class="tagline">Some tagline</p>
-									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 
-				<div class="container company mb40">
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="company-info clearfix">
-								<div class="logo-container pull-left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/fjaraskupan.logo.png" alt="logo"/></div>
-								<div class="info-container">
-									<h3 class="company-name">Fjäraskupan</h3>
-									<p class="tagline">Some tagline</p>
-									<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum omnis, maxime totam quod nisi sint cum pariatur soluta illum placeat non voluptatem magni quaerat itaque, animi veritatis accusamus ullam iste.</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</section>
+			<?php } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

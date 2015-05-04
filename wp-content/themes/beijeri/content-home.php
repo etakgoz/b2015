@@ -1,13 +1,37 @@
+	<?php
+		$homeDescriptionTitle = get_field('home_description_title');
+		$homeDescriptionText = get_field('home_description_text');
+
+		$posts = get_posts(array('post_type' => 'bolag', 'posts_per_page' => 20));
+	?>
+
+
 	<!-- Slider -->
 	<div class="tp-banner-container rs_fullwidth">
 
 		<div class="tp-banner">
 			<ul>
+				<?php
+					foreach ($posts as $post) {
+						setup_postdata( $post );
+						$excerpt = neatTrim(strip_tags($post->post_content), 250);
+						$permalink = get_permalink();
+
+						$postDate = $post->post_date;
+						$postDate = date("d M Y", time($postDate));
+
+						$image = get_field('hero_image');
+						if (!empty($image)) {
+							$imageUrl  = $image['url'];
+						} else {
+							$imageUrl = '';
+						}
+				?>
 
 				<!-- SLIDE 2 -->
-				<li data-transition="fade" data-slotamount="7" data-delay="8000" data-title="Vattentornet">
+				<li data-transition="fade" data-slotamount="7" data-delay="8000" data-title="<?php the_title(); ?>">
 					<!-- Background Image -->
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero/bg2.1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="">
+					<img src="<?php echo $imageUrl; ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="">
 					<div class="bg-overlay op5"></div>
 
 
@@ -18,7 +42,7 @@
 							data-endspeed="400" data-end="7900"
 							data-easing="Power3.easeInOut" data-endeasing=""
 							style="z-index: 4">
-						<h3 class="title-slider-small uppercased mb50">Vattentornet</h3>
+						<h3 class="title-slider-small uppercased mb50"><?php the_title(); ?> </h3>
 						</div>
 
 						<div class="tp-caption sfb stt"
@@ -28,7 +52,7 @@
 							data-endspeed="500" data-end="7950"
 							data-easing="Power3.easeInOut" data-endeasing=""
 							style="z-index: 4">
-						<h2 class="title-slider-large">Vattenmaskiner<br/> med förstklassigt dricksvatten</h2>
+						<h2 class="title-slider-large"><?php the_field('hero_image_text'); ?></h2>
 						</div>
 
 						<div class="tp-caption sfb stl"
@@ -42,83 +66,7 @@
 						</div>
 
 				</li>
-
-				<!-- SLIDE 3 -->
-				<li data-transition="fade" data-slotamount="7" data-delay="8000" data-title="Fjäråskupan">
-					<!-- Background Image -->
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero/bg3.1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="">
-					<div class="bg-overlay op4"></div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="-75" 
-							data-speed="600" data-start="600"
-							data-endspeed="400" data-end="7900"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h3 class="title-slider-small uppercased mb50">Fjäråskupan</h3>
-						</div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="30" 
-							data-speed="700" data-start="800"
-							data-endspeed="500" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h2 class="title-slider-large">Fjäråskupan: 25 år av <br/> Svenskt hantverkt</h2>
-						</div>
-
-
-						<div class="tp-caption sfb stl"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="120" 
-							data-speed="900" data-start="1200"
-							data-endspeed="600" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<a href="<?php echo get_site_url(); ?>/?page_id=12" class="btn-slider">läs mer</a>
-						</div>
-				</li>
-
-				<!-- SLIDE 4 -->
-				<li data-transition="fade" data-slotamount="7" data-delay="8000" data-title="IMERO">
-					<!-- Background Image -->
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero/bg4.1920x1080.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" alt="">
-					<div class="bg-overlay op5"></div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="-75" 
-							data-speed="600" data-start="600"
-							data-endspeed="400" data-end="7900"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h3 class="title-slider-small uppercased mb50">IMERO</h3>
-						</div>
-
-						<div class="tp-caption sfb stt"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="30" 
-							data-speed="700" data-start="800"
-							data-endspeed="500" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<h2 class="title-slider-large">Imero Gunnar F. Höglund AB<br/> är en grossist i<br/> metaller och rostfritt</h2>
-						</div>
-
-						<div class="tp-caption sfb stl"
-							data-x="left" data-hoffset="15"
-							data-y="center" data-voffset="120" 
-							data-speed="900" data-start="1200"
-							data-endspeed="600" data-end="7950"
-							data-easing="Power3.easeInOut" data-endeasing=""
-							style="z-index: 4">
-							<a href="<?php echo get_site_url(); ?>/?page_id=12" class="btn-slider">läs mer</a>
-						</div>
-
-				</li>
-
+				<?php } ?>
 			</ul>
 		</div>
 	</div> <!-- END Slider-->
@@ -127,8 +75,8 @@
 		<div class="container home-description">
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
-					<h2 class="description-title"><?php the_field('home_description_title'); ?></h2>
-					<p class="description-text"><?php the_field('home_description_text'); ?></p>
+					<h2 class="description-title"><?php echo $homeDescriptionTitle ?></h2>
+					<p class="description-text"><?php echo $homeDescriptionText; ?></p>
 				</div>
 			</div>
 		</div>

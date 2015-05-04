@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 					<div class="col-sm-8">
-						<?php the_title( '<h3 class="blog-post-title">', '</h1>' ); ?>
+						<h3 class="blog-post-title news-title"><a href="<?php echo get_permalink();?>"><?php the_title(); ?></a></h3>
 						<p><small><?php beijeri_posted_on(); ?></small></p>
 					</div>
 				</div>
