@@ -3,6 +3,7 @@
 		$homeDescriptionText = get_field('home_description_text');
 
 		$posts = get_posts(array('post_type' => 'bolag', 'posts_per_page' => 20));
+		shuffle($posts);
 	?>
 
 
@@ -62,7 +63,7 @@
 							data-endspeed="600" data-end="7950"
 							data-easing="Power3.easeInOut" data-endeasing=""
 							style="z-index: 4">
-						<a href="<?php echo get_site_url(); ?>/?page_id=12" class="btn-slider">läs mer</a>
+						<a href="<?php echo $permalink; ?>" class="btn-slider">läs mer</a>
 						</div>
 
 				</li>

@@ -8,6 +8,18 @@ module.exports = function(grunt) {
 
     clean: ["dist"],
 
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            src: ['images/*'],
+            dest: '<%= distFolder %>/',
+          }
+        ]
+      }
+    },
+
 
     concat: {
       options: {
@@ -90,7 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-
-  grunt.registerTask('build', ['clean', 'concat', 'less', 'cssmin', 'uglify']);
+  grunt.registerTask('build', ['clean', 'copy', 'concat', 'less', 'cssmin', 'uglify']);
 };

@@ -71,7 +71,7 @@ get_header(); ?>
 							<div class="company-info clearfix">
 								<div class="logo-container pull-left"><a href="<?php echo $permalink; ?>"><img src="<?php echo $imageUrl; ?>" alt="logo"/></a></div>
 								<div class="info-container">
-									<h3 class="company-name"><?php the_title(); ?></h3>
+									<h3 class="company-name"><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h3>
 									<p class="tagline"><?php the_field('tagline'); ?></p>
 									<div class="description"><?php the_field('short_description'); ?></div>
 								</div>

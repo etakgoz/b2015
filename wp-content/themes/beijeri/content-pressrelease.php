@@ -13,6 +13,7 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<?php the_excerpt(); ?>
+					<a class="read-more-link" href="<?php echo get_permalink();?>">Läs Mer</a>
 				</div>
 			</div>
 		</div>

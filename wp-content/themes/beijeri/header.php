@@ -24,10 +24,6 @@
 
   	<!-- CSS files -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,600,700,900,400italic|Roboto+Slab:400,700' rel='stylesheet'>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/plugins/elegant_font/html_css/style.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/plugins/rs-plugin/css/settings.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/plugins/owl-carousel/owl.carousel.css">
 
 	<?php if (SITE_VERSION === 'DEV') { ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/main.css">

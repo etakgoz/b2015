@@ -11,7 +11,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="section-header page-header">
-				<a name="<?php the_field('ledning_anchor'); ?>"></a>
 
 <!-- 				<div class="page-breadcrumbs-wrapper">
 					<div class="container">
@@ -27,7 +26,7 @@ get_header(); ?>
 					</div>
 				</div> -->
 
-				<div class="container">
+				<div class="container" id="<?php the_field('ledning_anchor'); ?>">
 					<div class="row">
 						<div class="col-sm-12">
 						<h1 class="section-title mb20"><?php the_field('ledning_title'); ?></h1>
@@ -94,8 +93,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<div class="section-header">
-				<a name="<?php the_field('styrelse_anchor'); ?>"></a>
+			<div class="section-header" id="<?php the_field('styrelse_anchor'); ?>">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
