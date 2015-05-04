@@ -137,6 +137,11 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * custom Fields
+ */
+require get_template_directory() . '/inc/custom-fields.php';
+
 
 class description_walker extends Walker_Nav_Menu
 {

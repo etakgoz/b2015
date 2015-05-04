@@ -2,8 +2,13 @@
 	margin: 20px auto;
 
 	h2 {
-		font-size: 42px; text-align: center;
+		font-size: 42px; text-align: center; line-height: 1.5em;
 		font-family: "Roboto Slab","Roboto","Helvetica New",sans-serif; font-weight: 500;
+
+		@media (max-width:@screen-tablet) {
+			text-align: left;
+			font-size: 36px;
+		}
 	}
 
 	.description-text {
