@@ -124,10 +124,11 @@
 	</div> <!-- END Slider-->
 
 	<section class="section">
-		<div class="container" style="margin: 10px auto;">
+		<div class="container home-description">
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1">
-					<p class="hero-description"><?php the_field('home_description'); ?>.</p>
+					<h2 class="description-title"><?php the_field('home_description_title'); ?></h2>
+					<p class="description-text"><?php the_field('home_description_text'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -276,12 +277,12 @@
 
 	<?php if ( !empty( $posts ) ): ?>
 	<section>
-		<div class="container mb50 mt20">
+		<div class="container mb50 mt20 home-posts">
 			<div class="row mb30">
 				<div class="col-sm-12">
 					<div class="clearfix">
 						<h3 class="title-medium br-bottom pull-left">Nyheter</h3>
-						<h3 class="title-small pull-right"><a href="<?php echo get_site_url(); ?>/nyheter">Se Alla Nyheter</a></h3>
+						<h3 class="title-small pull-right see-all"><a href="<?php echo get_site_url(); ?>/nyheter">Se alla nyheter</a></h3>
 					</div>
 				</div>
 			</div>
@@ -289,18 +290,17 @@
 				<?php 
 					foreach ($posts as $post) {
 						setup_postdata( $post );
-						$excerpt = get_the_excerpt();
+						$excerpt = neatTrim(strip_tags($post->post_content), 250);
+						$permalink = get_permalink();
 
 						$postDate = $post->post_date;
 						$postDate = date("d M Y", time($postDate));
 				?>
 					<div class="col-md-4">
 						<div class="box-services-b">
-							<h3 class="title-small mb0"><?php echo $post->post_title; ?><a href="#" class="link-read-more xs-mt0">läs mer</a></h3>
-							<p><?php echo $excerpt; ?></p>
+							<h3 class="title-small mb10"><a href="<?php echo $permalink; ?>"><?php echo $post->post_title; ?></a></h3>
+							<p><?php echo $excerpt; ?><a href="<?php echo $permalink; ?>" class="link-read-more xs-mt0">läs mer</a></p>
 							<small><i class="fa fa-clock-o mr10"></i><?php echo $postDate; ?></small>
-							<!--<span class="py10"> / </span>
-							<small><a href="#">Johan Wall</a></small>-->
 						</div>
 					</div><!--./col-md-4-->
 				<?php
