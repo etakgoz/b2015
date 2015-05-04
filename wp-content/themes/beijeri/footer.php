@@ -17,13 +17,20 @@
 				<div class="col-sm-12 col-md-6">
 					<div class="footer-widget">
 						<h3 class="footer-title">Beijerinvest</h3>
-						<ul class="footer-links clearfix">
-							<li><a href="#">Hem</a></li>
-							<li><a href="#">Våra Bolag</a></li>
-							<li><a href="#">Om Oss</a></li>
-							<li><a href="#">Styrelse</a></li>
-							<li><a href="#">Nyheter</a></li>
-						</ul>
+						<?php
+						wp_nav_menu( array(
+						 'container' =>false,
+						 'menu_class' => 'footer-links clearfix',
+						 'echo' => true,
+						 'before' => '',
+						 'after' => '',
+						 'link_before' => '',
+						 'link_after' => '',
+						 'depth' => 0,
+						 'walker' => new description_walker())
+						 );
+
+						?>
 					</div>
 				</div>
 
@@ -39,7 +46,7 @@
 				</div>
 
 				<div class="col-sm-6 col-md-3">
-					<div class="footer-widget mt60">
+					<div class="footer-widget mt60" style="padding-top: 5px">
 						<p>Övriga frågor</p>
 						<p>Johan Wall</p>
 						<p><a href="mailto:johan.wall@beijerinvest.se">johan.wall@beijerinvest.se</a></p>

@@ -228,7 +228,7 @@
 
 	if ($('.rs_boxed').length) {
 	    jQuery('.tp-banner').revolution({
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:550,
 			hideThumbs:200,
@@ -244,7 +244,7 @@
 
 	if ($('.rs_fullscreen').length) {
 		jQuery('.tp-banner').revolution({
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:550,
 			hideThumbs:200,
@@ -261,7 +261,7 @@
 
 	if ($('.rs_fullwidth').length) {
 		jQuery('.tp-banner').revolution({
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:550,
 			hideThumbs:200,
@@ -278,7 +278,7 @@
 
 	if ($('.rs_fullscreen_video').length) {
 		jQuery('.tp-banner').revolution({
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:550,
 			hideThumbs:10,
@@ -293,7 +293,7 @@
 
 	if ($('.rs_fullwidth_video').length) {
 		jQuery('.tp-banner').revolution({
-			delay:9000,
+			delay:7000,
 			startwidth:1170,
 			startheight:550,
 			hideThumbs:200,
