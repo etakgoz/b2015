@@ -66,3 +66,21 @@
 .menu-fixed .navbar-fixed-top {
 	border-bottom: solid 1px #DEDEDE;
 }
+
+.navbar-brand {
+	position: relative;
+	top: 8px;
+	@media (max-width:@screen-tablet) {
+		top: 6px
+	}
+
+	img {
+		@media (max-width:@screen-phone) {
+			width: 260px;
+		}
+
+		@media (max-width:@screen-tablet) {
+			width: 300px;
+		}
+	}
+}

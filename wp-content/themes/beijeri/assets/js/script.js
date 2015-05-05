@@ -298,8 +298,8 @@ $("body").on("click", "a", scrollIfAnchor);
 	}
 
 	if ($('.rs_fullwidth').length) {
-		jQuery('.tp-banner').revolution({
-			delay:7000,
+		var $slider = jQuery('.tp-banner').revolution({
+			delay:4000,
 			startwidth:$(".container").outerWidth(),
 			startheight:550,
 			hideThumbs:200,
@@ -311,7 +311,6 @@ $("body").on("click", "a", scrollIfAnchor);
 			onHoverStop:"off"
 		});
 
-		console.log("Start width: " + $(".container").outerWidth());
 	}
 
 

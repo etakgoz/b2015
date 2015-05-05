@@ -1,10 +1,23 @@
 Things to do
 ============
 
-make home page carousel dynamic from the resources
+add size and aspect ratio info to the exported fields
+
+export fields
+
+heading 2 vs heading 3
+
+reinitialize slider (?)
+
+install site
+
+
+Test
+=====
 
 make home page carousel work on mobile (done? - but test it)
 
-change logo
+Questions
+========
 
-install site
+Do we need controls in home page filters?

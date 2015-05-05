@@ -577,6 +577,9 @@
 	.menu > .menu-item {
 		position: relative;
   		bottom: -1px;
+		@media (max-width:@screen-tablet) {
+			border-bottom:  solid 1px #566;
+		}
 	}
 
 	.menu > li > a {
@@ -1531,8 +1534,10 @@
 	}
 	@media (max-width:767px) {
 		.title-slider-large {
-			font-size:24px;
+			font-size:32px;
+			margin-bottom: 30px;
 		}
+		.title-slider-small {margin-bottom: 10px;}
 
 		.tp-caption .br-bottom:after,
 		.tp-caption .br-bottom-center:after {
@@ -1540,6 +1545,12 @@
 		}
 
 		.tp-caption { padding:0 30px; }
+	}
+
+	@media (max-width:@screen-phone) {
+		.title-slider-large {
+			font-size:24px;
+		}
 	}
 
 
