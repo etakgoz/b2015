@@ -69,7 +69,7 @@ if ( ! function_exists( 'beijeri_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function beijeri_posted_on() {
+function beijeri_posted_on($isLink = true) {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -81,10 +81,17 @@ function beijeri_posted_on() {
 		esc_html( get_the_date() )
 	);
 
-	$posted_on = sprintf(
-		_x( '%s', 'post date', 'beijeri' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	if ($isLink) {
+		$posted_on = sprintf(
+			_x( '%s', 'post date', 'beijeri' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+	} else {
+		$posted_on = sprintf(
+			_x( '%s', 'post date', 'beijeri' ), $time_string
+		);
+	}
+
 
 	$byline = sprintf(
 		_x( 'by %s', 'post author', 'beijeri' ),

@@ -223,6 +223,44 @@
 	}
 
 
+/* *********************	Anchor Links	********************* */
+/**
+ * Check a href for an anchor. If exists, and in document, scroll to it.
+ * If href argument ommited, assumes context (this) is HTML Element,
+ * which will be the case when invoked by jQuery after an event
+ */
+function scrollIfAnchor(href) {
+    href = typeof(href) == "string" ? href : $(this).attr("href");
+
+    // You could easily calculate this dynamically if you prefer
+    var fromTop = $(".navbar-header").outerHeight() + 10;
+
+    // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
+    // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174
+    //
+ 	if(href.indexOf("#") !== 0) {
+ 		href = href.substring(href.indexOf("#"));
+ 	}
+
+    var $target = $(href);
+
+    // Older browser without pushState might flicker here, as they momentarily
+    // jump to the wrong position (IE < 10)
+    if($target.length) {
+        $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+        if(history && "pushState" in history) {
+            history.pushState({}, document.title, window.location.pathname + href);
+            return false;
+        }
+    }
+}
+
+// When our page loads, check to see if it contains and anchor
+scrollIfAnchor(window.location.hash);
+
+// Intercept all anchor clicks
+$("body").on("click", "a", scrollIfAnchor);
+
 /* *********************	Slider config	********************* */
 
 
@@ -245,7 +283,7 @@
 	if ($('.rs_fullscreen').length) {
 		jQuery('.tp-banner').revolution({
 			delay:7000,
-			startwidth:1170,
+			startwidth:$(".container").outerWidth(),
 			startheight:550,
 			hideThumbs:200,
 			fullWidth:"off",
@@ -262,7 +300,7 @@
 	if ($('.rs_fullwidth').length) {
 		jQuery('.tp-banner').revolution({
 			delay:7000,
-			startwidth:1170,
+			startwidth:$(".container").outerWidth(),
 			startheight:550,
 			hideThumbs:200,
 			fullWidth:"on",
@@ -272,7 +310,11 @@
 			navigationType:"none",
 			onHoverStop:"off"
 		});
+
+		console.log("Start width: " + $(".container").outerWidth());
 	}
+
+
 
 
 

@@ -23,7 +23,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   	<!-- CSS files -->
-	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,600,700,900,400italic|Roboto+Slab:400,700' rel='stylesheet'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,600,700,900,400italic|Roboto+Slab:400,700' rel='stylesheet'>
 
 	<?php if (SITE_VERSION === 'DEV') { ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/main.css">

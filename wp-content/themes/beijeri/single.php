@@ -12,7 +12,15 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php
+				$image = get_field('hero_background_image');
+				if (empty($image)) {
+					get_template_part( 'content', 'single' );
+				} else {
+					get_template_part( 'content', 'single-hero' );
+				}
+			?>
+			<?php  ?>
 
 		<?php endwhile; // end of the loop. ?>
 

@@ -1,9 +1,10 @@
 /* Section Header */
 .section-header {
 	.page-breadcrumbs-wrapper {
-		@media (min-width:@screen-tablet) {
+		display: none;
+		/*@media (min-width:@screen-tablet) {
 			display: none;
-		}
+		}*/
 	}
 
 	&.page-header {
@@ -19,8 +20,8 @@
 
 	.section-title {
 		font-size:42px;
-		font-weight: 600;
-		color:#444;
+		font-weight: 500;
+		color:#303030;
 		margin-bottom:20px;
 		line-height:36px;
 		letter-spacing: 1px;
@@ -30,6 +31,8 @@
 	.section-title-text {
 		font-size: 18px; line-height: 1.4em;
 	}
+
+	.date-published { margin-bottom: 0;  font-size: 18px;}
 
 }
 
@@ -51,4 +54,15 @@
 
 	h1, h2, h3, h4, h5, h6 { font-size: 600; }
 	h1 { font-family: "Roboto Slab","Roboto","Helvetica New",sans-serif; font-weight: 500; }
+}
+
+
+.navbar-fixed-top {
+	@media (max-width:@screen-desktop) {
+		border-bottom: solid 1px #DEDEDE;
+	}
+}
+
+.menu-fixed .navbar-fixed-top {
+	border-bottom: solid 1px #DEDEDE;
 }

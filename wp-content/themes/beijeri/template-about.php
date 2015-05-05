@@ -13,20 +13,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="section-header page-header">
-				<div class="page-breadcrumbs-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="pull-left">
-									<div class="page-breadcrumbs" style="padding-left: 0">
-										<a href="#">hem</a> <span class="separator"> / </span> <?php the_title( '<a class="active">', '</a>' ); ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">

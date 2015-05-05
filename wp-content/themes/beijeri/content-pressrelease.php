@@ -1,4 +1,4 @@
-<section class="section mt30">
+<section class="section mt10">
 	<article class="blog-post-content">
 		<div class="container">
 			<div class="row">

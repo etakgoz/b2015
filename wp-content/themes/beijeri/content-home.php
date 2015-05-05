@@ -6,7 +6,6 @@
 		shuffle($posts);
 	?>
 
-
 	<!-- Slider -->
 	<div class="tp-banner-container rs_fullwidth">
 
@@ -43,7 +42,7 @@
 							data-endspeed="400" data-end="7900"
 							data-easing="Power3.easeInOut" data-endeasing=""
 							style="z-index: 4">
-						<h3 class="title-slider-small uppercased mb50"><?php the_title(); ?> </h3>
+						<h3 class="title-slider-small uppercased"><?php the_title(); ?> </h3>
 						</div>
 
 						<div class="tp-caption sfb stt"

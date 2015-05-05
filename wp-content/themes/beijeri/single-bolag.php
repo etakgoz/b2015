@@ -41,7 +41,7 @@ get_header(); ?>
 						<div class="col-sm-12">
 							<div class="pull-right">
 								<div class="page-breadcrumbs">
-									Hem <span class="separator"> / </span> Våra Bolag <span class="separator"> / </span> <?php the_title( '<a class="active">', '</a>' ); ?>
+									<a href="<?php echo get_site_url() ?>">Hem</a> <span class="separator"> / </span> Våra Bolag <span class="separator"> / </span> <?php the_title( '<a class="active">', '</a>' ); ?>
 								</div>
 							</div>
 						</div>

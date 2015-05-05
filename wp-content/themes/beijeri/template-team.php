@@ -10,23 +10,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="section-header page-header">
-
-<!-- 				<div class="page-breadcrumbs-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="pull-left">
-									<div class="page-breadcrumbs" style="padding-left: 0">
-										<a href="#">hem</a> <span class="separator"> / </span> <?php the_title( '<a class="active">', '</a>' ); ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
-				<div class="container" id="<?php the_field('ledning_anchor'); ?>">
+			<div class="section-header page-header team-section-header" id="<?php the_field('ledning_anchor'); ?>">
+				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 						<h1 class="section-title mb20"><?php the_field('ledning_title'); ?></h1>
@@ -93,7 +78,7 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<div class="section-header" id="<?php the_field('styrelse_anchor'); ?>">
+			<div class="section-header team-section-header" id="<?php the_field('styrelse_anchor'); ?>">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">

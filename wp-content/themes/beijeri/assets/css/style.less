@@ -574,6 +574,11 @@
 		float: left;
 	}
 
+	.menu > .menu-item {
+		position: relative;
+  		bottom: -1px;
+	}
+
 	.menu > li > a {
 		padding: 23px 15px 12px;
 		font-size: 18px;
@@ -594,7 +599,7 @@
 	}
 
 	.sub-menu > .current-menu-item > a {
-		font-weight: 700;
+		font-weight: 600;
 	}
 
 	.menu > li > a:hover,
@@ -1457,12 +1462,14 @@
 	/* Slider Titles */
 	.title-slider-large {
 		font-family:"Roboto Slab",sans-serif;
-		font-size:52px;
-		line-height:1.1em;
+		font-size:48px;
+		line-height: 1.4em;
 		font-weight: 700;
 		color:#e2e3e4;
 		letter-spacing: 1px;
-		margin-bottom: 72px;
+		margin-bottom: 64px;
+
+		p { margin-bottom: 0;}
 	}
 	.title-slider-large.larger {
 		font-size: 60px;
@@ -1508,32 +1515,31 @@
 		font-weight: 700;
 		letter-spacing: 1px;
 		color:#e2e3e4;
+		margin-bottom: 30px;
 	}
 	.title-slider-small.uppercased {
 		font-size:13px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
+
 	}
 
 	@media (max-width:991px) {
-		.title-slider-large { font-size:30px; line-height:34px;}
-		.tp-caption { padding:0 30px; }
+		.title-slider-large { font-size:40px;}
+		.tp-caption { padding:0 30px; white-space: normal;}
+		.title-slider-small {margin-bottom: 20px;}
 	}
 	@media (max-width:767px) {
 		.title-slider-large {
 			font-size:24px;
-			line-height:30px;
-			padding:0 15px;
 		}
-		.tp-caption .title-slider-small,
-		.tp-caption .btn-slider { display:none; }
 
 		.tp-caption .br-bottom:after,
 		.tp-caption .br-bottom-center:after {
 			border-top:none;
 		}
 
-		.tp-caption { padding:0 20px; }
+		.tp-caption { padding:0 30px; }
 	}
 
 
@@ -3610,12 +3616,6 @@
 		.shop-account-image {
 			margin-bottom:-100px;
 		}
-	}
-
-
-/* Page Team */
-	.team-photos-section {
-		padding-top: 30px;
 	}
 
 
