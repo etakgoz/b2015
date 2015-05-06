@@ -265,8 +265,6 @@ function scrollIfAnchor(href) {
     }
 }
 
-// When our page loads, check to see if it contains and anchor
-scrollIfAnchor(window.location.hash);
 
 // Intercept all anchor clicks
 $("body").on("click", "a", scrollIfAnchor);
@@ -1072,9 +1070,13 @@ $("img.lazy").lazyload();
 
 		if ($("#preloader").length) {
 
-			$('#status').fadeOut();
+			$('#status').fadeOut(400, function () {
+				// When our page loads, check to see if it contains and anchor
+				scrollIfAnchor(window.location.hash);
+			});
 			$('#preloader').delay(300).fadeOut('slow');
 			$body.delay(300).css({'overflow':'visible'});
+
 
 		} // END if
 
