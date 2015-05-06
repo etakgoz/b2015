@@ -58,7 +58,9 @@ get_header(); ?>
 								<div class="logo-container pull-left"><a href="<?php echo $permalink; ?>"><img src="<?php echo $imageUrl; ?>" alt="logo"/></a></div>
 								<div class="info-container">
 									<h3 class="company-name"><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h3>
+									<?php if( get_field( "tagline" ) ): ?>
 									<p class="tagline"><?php the_field('tagline'); ?></p>
+									<?php endif; ?>
 									<div class="description"><?php the_field('short_description'); ?></div>
 								</div>
 							</div>

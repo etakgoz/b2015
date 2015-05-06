@@ -121,7 +121,9 @@
 	                            	<a href="<?php echo $permalink; ?>" class="mask">
 	                            		<div class="portfolio-middle">
 	                            			<h3 class="project-title br-bottom"><?php the_title(); ?></h3>
-	                            			<p class="text"><?php the_field('tagline'); ?></p>
+	                            			<?php if( get_field( "tagline" ) ): ?>
+											<p class="text"><?php the_field('tagline'); ?></p>
+											<?php endif; ?>
 	                            		</div>
 	                            	</a>
 								</div>

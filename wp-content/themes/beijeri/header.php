@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/dist/css/main.min.css">
 	<?php } ?>
 
-	<?php // wp_head(); ?>
+	<?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?>>

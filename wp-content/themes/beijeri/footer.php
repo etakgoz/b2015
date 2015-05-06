@@ -80,7 +80,7 @@
 
 	<div style="visiblity: hidden; font-weight: 600">Some Text to Trigger Loading of Bold Text</div>
 
-<?php // wp_footer(); ?>
+<?php wp_footer(); ?>
 
 
 	<?php if (SITE_VERSION === 'DEV') { ?>
