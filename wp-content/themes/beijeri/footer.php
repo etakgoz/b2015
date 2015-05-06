@@ -98,6 +98,7 @@
 	<!--<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/retina.min.js"></script>-->
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/stellar.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/sticky.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery.lazyload.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/isotope/isotope.pkgd.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/isotope/imagesloaded.pkgd.min.js"></script>

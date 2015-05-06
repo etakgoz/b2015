@@ -45,7 +45,7 @@ get_header(); ?>
 							<div class="col-sm-6 col-md-4">
 		                    	<div class="portfolio-el">
 									<div class="view">
-		                            	<img src="<?php the_sub_field('picture'); ?>" alt="project">
+		                            	<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/placeholder.jpg" class="lazy" data-original="<?php the_sub_field('picture'); ?>" alt="<?php the_sub_field('name'); ?>">
 		                            	<div class="mask">
 		                            		<a href="#" class="portfolio-middle"><i class="fa fa-search"></i></a>
 		                            	</div>
@@ -113,7 +113,7 @@ get_header(); ?>
 							<div class="col-sm-6 col-md-4">
 		                    	<div class="portfolio-el">
 									<div class="view">
-		                            	<img src="<?php the_sub_field('picture'); ?>" alt="project">
+		                            	<img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/placeholder.jpg" class="lazy" data-original="<?php the_sub_field('picture'); ?>" alt="<?php the_sub_field('name'); ?>">
 		                            	<div class="mask">
 		                            		<a href="#" class="portfolio-middle"><i class="fa fa-search"></i></a>
 		                            	</div>

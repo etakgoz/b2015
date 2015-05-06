@@ -271,6 +271,11 @@ scrollIfAnchor(window.location.hash);
 // Intercept all anchor clicks
 $("body").on("click", "a", scrollIfAnchor);
 
+
+// Lazy Load
+$("img.lazy").lazyload();
+
+
 /* *********************	Slider config	********************* */
 
 

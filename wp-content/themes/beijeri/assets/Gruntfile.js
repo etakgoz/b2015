@@ -34,7 +34,7 @@ module.exports = function(grunt) {
           'plugins/rs-plugin/js/jquery.themepunch.tools.min.js',
           'plugins/rs-plugin/js/jquery.themepunch.revolution.min.js',
           'plugins/jquery.appear.js',
-          //'plugins/retina.min.js',
+          'plugins/jquery.lazyload.min.js',
           'plugins/stellar.min.js',
           'plugins/sticky.min.js',
           'plugins/owl-carousel/owl.carousel.min.js',
