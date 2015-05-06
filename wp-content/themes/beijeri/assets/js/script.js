@@ -233,7 +233,16 @@ function scrollIfAnchor(href) {
     href = typeof(href) == "string" ? href : $(this).attr("href");
 
     // You could easily calculate this dynamically if you prefer
-    var fromTop = $(".navbar-header").outerHeight() + 10;
+    var fromTop = 0,
+    	windowWidth = $(window).width();
+
+    if (windowWidth < 768) {
+    	fromTop = 0;
+    } if (windowWidth > 768 && windowWidth < 992) {
+		fromTop = $(".main-header").outerHeight() + 10;
+    } else {
+		fromTop = $(".navbar-header").outerHeight() + 10;
+	}
 
     // If our Href points to a valid, non-empty anchor, and is on the same page (e.g. #foo)
     // Legacy jQuery and IE7 may have issues: http://stackoverflow.com/q/1593174

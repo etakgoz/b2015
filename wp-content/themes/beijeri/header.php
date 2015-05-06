@@ -83,7 +83,7 @@
 	</div>
 
 	<!-- Do not remove this class -->
-	<div class="push-top" style="margin-top: 66px;"></div>
+	<div class="push-top"></div>
 
 
 	<!--<div id="content" class="site-content">-->
