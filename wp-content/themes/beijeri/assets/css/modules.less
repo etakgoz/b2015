@@ -56,6 +56,12 @@
 
 	h1, h2, h3, h4, h5, h6 { font-weight: 600; }
 	h1 { font-family: "Roboto Slab","Roboto","Helvetica New",sans-serif; font-weight: 500; }
+
+	@media (max-width:@screen-tablet) {
+		h1 {
+			font-size: 36px;
+		}
+	}
 }
 
 
@@ -87,6 +93,7 @@
 .container-fluid>.navbar-collapse {
 	margin-left: 0;
 	margin-right: 0;
+	padding: 0;
 }
 
 .navbar-brand {
