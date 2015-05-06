@@ -71,6 +71,7 @@
 			<div class="row">
 				<div class="col-sm-6 col-md-4">
 					<p class="copyright">&copy; Copyright 2015 Beijerinvest</p>
+					<div style="visibility: hidden; font-weight: 600">Some Text to Trigger Loading of Bold Text</div>
 				</div>
 			</div>
 		</div>
@@ -78,7 +79,7 @@
 
 </div> <!-- END Global Wrapper -->
 
-	<div style="visiblity: hidden; font-weight: 600">Some Text to Trigger Loading of Bold Text</div>
+
 
 <?php wp_footer(); ?>
 
