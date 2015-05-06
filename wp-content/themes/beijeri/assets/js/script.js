@@ -238,7 +238,7 @@ function scrollIfAnchor(href) {
 
     if (windowWidth < 768) {
     	fromTop = 0;
-    } if (windowWidth > 768 && windowWidth < 992) {
+    } else if  (windowWidth > 768 && windowWidth < 992) {
 		fromTop = $(".main-header").outerHeight() + 10;
     } else {
 		fromTop = $(".navbar-header").outerHeight() + 10;
@@ -256,7 +256,8 @@ function scrollIfAnchor(href) {
     // Older browser without pushState might flicker here, as they momentarily
     // jump to the wrong position (IE < 10)
     if($target.length) {
-        $('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+    	var scroll = $target.offset().top - fromTop;
+        $('html, body').animate({ scrollTop:  scroll });
         if(history && "pushState" in history) {
             history.pushState({}, document.title, window.location.pathname + href);
             return false;
