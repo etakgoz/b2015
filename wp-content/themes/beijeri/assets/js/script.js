@@ -177,12 +177,17 @@
 		}; // END Megamenu object
 
 
-// console.log($windowWidth)
-// 	if ($windowWidth < 768) {
-// 		Megamenu.mobileMenu();
-// 	} else {
-// 		Megamenu.desktopMenu();
-// 	}
+	$(".menu-item").on("click", function (event) {
+		if ($(event.target).parent().find(".sub-menu").size() > 0) {
+			$(event.target).parent().find(".sub-menu").show();
+			return false;
+		} else {
+			console.log($(event.target).parent().parent());
+			if ($(event.target).parent().parent().hasClass("sub-menu")) {
+				$(event.target).parent().parent().hide();
+			}
+		}
+	});
 
 
 
@@ -236,10 +241,11 @@ function scrollIfAnchor(href) {
     var fromTop = 0,
     	windowWidth = $(window).width();
 
-    if (windowWidth < 768) {
+    if (windowWidth < 767) {
     	fromTop = 0;
     } else if  (windowWidth > 767 && windowWidth < 992) {
-		fromTop = $(".main-header").outerHeight() + 10;
+		fromTop = $(".navbar-fixed-top").outerHeight() + 10;
+		console.log("here!!!");
     } else {
 		fromTop = $(".navbar-header").outerHeight() + 10;
 	}
