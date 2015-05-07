@@ -238,7 +238,7 @@ function scrollIfAnchor(href) {
 
     if (windowWidth < 768) {
     	fromTop = 0;
-    } else if  (windowWidth > 768 && windowWidth < 992) {
+    } else if  (windowWidth > 767 && windowWidth < 992) {
 		fromTop = $(".main-header").outerHeight() + 10;
     } else {
 		fromTop = $(".navbar-header").outerHeight() + 10;

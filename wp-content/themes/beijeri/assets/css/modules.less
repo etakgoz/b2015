@@ -11,12 +11,11 @@
 		margin: 60px auto 0;
 
 		@media (min-width:@screen-tablet) {
-			margin: 120px auto 0;
+			margin: 160px auto 0;
 		}
 		@media (min-width: @screen-desktop) {
 			margin: 140px auto 0;
 		}
-
 
 	}
 
@@ -64,6 +63,23 @@
 	}
 }
 
+@media (width: 768px) {
+	.header-wrapper .navbar-right, .navbar-collapse {
+	  background: #FFF !important;
+	}
+
+	.menu > .menu-item {
+	  border-bottom: none;
+	}
+}
+
+@media (width: 768px) {
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	  margin-left: inherit;
+	}
+}
+
+
 
 .navbar-fixed-top {
 	@media (max-width:@screen-desktop) {
@@ -80,6 +96,7 @@
 		background: none;
 	}
 }
+
 
 .navbar-fixed-top {
 	@media (max-width:@screen-desktop) {
