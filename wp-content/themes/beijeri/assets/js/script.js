@@ -283,6 +283,8 @@ $("body").on("click", "a", scrollIfAnchor);
 // Lazy Load
 $("img.lazy").lazyload();
 
+$(".navbar-fixed-top").width($(window).width());
+
 
 /* *********************	Slider config	********************* */
 
