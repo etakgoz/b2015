@@ -178,15 +178,20 @@
 
 
 	$(".menu-item").on("click", function (event) {
-		if ($(event.target).parent().find(".sub-menu").size() > 0) {
-			$(event.target).parent().find(".sub-menu").show();
-			return false;
-		} else {
-			console.log($(event.target).parent().parent());
-			if ($(event.target).parent().parent().hasClass("sub-menu")) {
-				$(event.target).parent().parent().hide();
+		if ($(window).width() > 767) {
+			if ($(event.target).parent().find(".sub-menu").size() > 0) {
+				$(event.target).parent().find(".sub-menu").show();
+				return false;
+			} else {
+				if ($(event.target).parent().parent().hasClass("sub-menu")) {
+					$(event.target).parent().parent().hide();
+				}
 			}
+		} else {
+			$(".navbar-collapse").removeClass("in");
+			console.log("here!!!");
 		}
+
 	});
 
 
@@ -242,7 +247,7 @@ function scrollIfAnchor(href) {
     	windowWidth = $(window).width();
 
     if (windowWidth < 767) {
-    	fromTop = 0;
+		fromTop = $(".navbar-fixed-top").outerHeight();
     } else if  (windowWidth > 767 && windowWidth < 992) {
 		fromTop = $(".navbar-fixed-top").outerHeight() + 10;
     } else {
@@ -384,7 +389,7 @@ $("img.lazy").lazyload();
 
 
 	// Stellar - Parallax backgrounds
-	if ( ($(".stellar").length) && $(window).width() > 767 ) {
+	if ( ($(".stellar").length) && $(window).width() > 1024 ) {
 
 		$body.stellar({
 			horizontalScrolling: false,
