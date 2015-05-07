@@ -7,7 +7,7 @@
 <?php
 	$image = get_field('hero_background_image');
 	if (!empty($image)) {
-		$bgStyle = 'style="background-image: url(\''.$image['url'].'\');"';
+		$bgStyle = 'style="background-image: url(\''.$image['url'].'\'); background-size: cover;"';
 	} else {
 		$bgStyle = '';
 	}
