@@ -245,7 +245,6 @@ function scrollIfAnchor(href) {
     	fromTop = 0;
     } else if  (windowWidth > 767 && windowWidth < 992) {
 		fromTop = $(".navbar-fixed-top").outerHeight() + 10;
-		console.log("here!!!");
     } else {
 		fromTop = $(".navbar-header").outerHeight() + 10;
 	}
