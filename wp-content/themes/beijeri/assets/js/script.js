@@ -285,6 +285,10 @@ $("img.lazy").lazyload();
 
 $(".navbar-fixed-top").width($(window).width());
 
+$(window).on("resize", function () {
+	$(".navbar-fixed-top").width($(window).width());
+});
+
 
 /* *********************	Slider config	********************* */
 
