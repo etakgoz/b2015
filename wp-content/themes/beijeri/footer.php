@@ -11,66 +11,13 @@
 	<!--</div><!-- #content -->
 
 	<!-- Footer wrapper -->
-	<footer class="footer-wrapper footer-bg">
+	<footer class="footer-wrapper">
 		<div class="container">
-			<div class="row col-p30">
-				<div class="col-sm-12 col-md-6">
-					<div class="footer-widget">
-						<h3 class="footer-title">Beijerinvest</h3>
-						<?php
-						wp_nav_menu( array(
-						 'container' =>false,
-						 'menu_class' => 'footer-links clearfix',
-						 'echo' => true,
-						 'before' => '',
-						 'after' => '',
-						 'link_before' => '',
-						 'link_after' => '',
-						 'depth' => 0,
-						 'walker' => new description_walker())
-						 );
-
-						?>
-					</div>
-				</div>
-
-				<?php
-				if( have_rows('kontakt', 'options') ):
-					$loop = 0;
-
-				 	// loop through the rows of data
-				    while ( have_rows('kontakt', 'options') ) : the_row();
-				?>
-					<div class="col-sm-6 col-md-3">
-						<div class="footer-widget <?php if ($loop == 1) echo 'mt60' ?>" <?php if ($loop == 1) echo 'style="padding-top: 5px;"' ?>>
-							<?php if ($loop == 0) : ?>
-							<h3 class="footer-title">Kontakt</h3>
-							<?php endif; ?>
-							<p><?php the_sub_field('type');?></p>
-							<p><?php the_sub_field('name');?></p>
-							<p><a href="mailto:<?php the_sub_field('email');?>"><?php the_sub_field('email');?></a></p>
-							<p>Tel: <?php the_sub_field('landline');?></p>
-							<p>Mob: <?php the_sub_field('mobile');?></p>
-						</div>
-					</div>
-				<?php
-					$loop++;
-					endwhile;
-				endif;
-				?>
-				<!--<div class="col-sm-6 col-md-3">
-					<div class="footer-widget mt60" style="padding-top: 5px">
-						<p>Övriga frågor</p>
-						<p>Johan Wall</p>
-						<p><a href="mailto:johan.wall@beijerinvest.se">johan.wall@beijerinvest.se</a></p>
-						<p>Tel: +46 8 701 08 17</p>
-						<p>Mob: +46 70 554 18 00</p>
-					</div>
-				</div> -->
-			</div>
 			<div class="row">
 				<div class="col-sm-6 col-md-4">
-					<p class="copyright">&copy; Copyright 2015 Beijerinvest</p>
+					<!--<p class="copyright">&copy; Copyright 2015 Beijerinvest</p>-->
+					<p class="copyright"><?php the_field('footer_text', 'options');?></p>
+					<!--Don't Delete Below!!-->
 					<div style="visibility: hidden; font-weight: 600">Some Text to Trigger Loading of Bold Text</div>
 				</div>
 			</div>

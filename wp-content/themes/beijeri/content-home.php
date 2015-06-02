@@ -5,7 +5,7 @@
 		$companies = get_posts(array('post_type' => 'bolag', 'posts_per_page' => 20));
 		shuffle($companies);
 		$sliderCompanies = array();
-		$sliderCompanyIndexes = array_rand($companies, 3);
+		$sliderCompanyIndexes = array_rand($companies, count($companies));
 
 		for ($i = 0; $i < count($sliderCompanyIndexes); $i++) {
 			$sliderCompanies []= $companies[$sliderCompanyIndexes[$i]];

@@ -186,12 +186,13 @@ class description_walker extends Walker_Nav_Menu
 
 
 function neatTrim($str, $n, $delim='...') {
-   $len = strlen($str);
-   if ($len > $n) {
-       preg_match('/(.{' . $n . '}.*?)\b/', $str, $matches);
-       return rtrim($matches[1]) . $delim;
-   }
-   else {
-       return $str;
-   }
+	$len = strlen($str);
+	if ($len > $n) {
+		$str = preg_replace('/\s+?(\S+)?$/', '', substr($str, 0, $n));
+		// preg_match('/(.{' . $n . '}.*?)\b/', $str, $matches);
+		return rtrim($str) . $delim;
+	}
+	else {
+		return $str;
+	}
 }

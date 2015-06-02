@@ -12,7 +12,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<?php the_excerpt(); ?>
+					<p><?php echo neatTrim(strip_tags(get_the_content()), 400); ?></p>
 					<a class="read-more-link" href="<?php echo get_permalink();?>">Läs Mer</a>
 				</div>
 			</div>
