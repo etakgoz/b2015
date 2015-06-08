@@ -159,8 +159,7 @@
 						$excerpt = neatTrim(strip_tags($post->post_content), 250);
 						$permalink = get_permalink();
 
-						$postDate = $post->post_date;
-						$postDate = date("d M Y", time($postDate));
+						$postDate = date("d M Y", strtotime($post->post_date));
 				?>
 					<div class="col-md-4">
 						<div class="box-services-b">
