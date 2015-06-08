@@ -29,13 +29,22 @@ get_header(); ?>
 			</div>
 
 			<?php 
-				$posts = get_posts(array('post_type' => 'bolag', 'posts_per_page' => 20));
+				$posts = get_posts(array(
+					'post_type' => 'bolag',
+					'posts_per_page' => 20,
+					'meta_key' => 'sort_order',
+					'orderby' => 'meta_value_num',
+					'order'	=> 'ASC'
+					));
 			?>
 
 			<?php if ( !empty( $posts ) ) { ?>
 
 			<section class="companies mt30">
 				<?php
+
+
+
 					foreach ($posts as $post) {
 						setup_postdata( $post );
 						$excerpt = neatTrim(strip_tags($post->post_content), 250);

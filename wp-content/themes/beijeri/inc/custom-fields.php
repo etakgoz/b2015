@@ -2,278 +2,6 @@
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_footer-options',
-		'title' => 'Footer Options',
-		'fields' => array (
-			array (
-				'key' => 'field_556dbea5b97c0',
-				'label' => 'Footer Text',
-				'name' => 'footer_text',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'options_page',
-					'operator' => '==',
-					'value' => 'acf-options',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
-}
-
-
-
-
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
-		'id' => 'acf_team-page',
-		'title' => 'Team Page',
-		'fields' => array (
-			array (
-				'key' => 'field_5547638acfdb3',
-				'label' => 'Ledning',
-				'name' => '',
-				'type' => 'tab',
-			),
-			array (
-				'key' => 'field_55472c9a57c0e',
-				'label' => 'Ledning Title',
-				'name' => 'ledning_title',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_55472c3d57c0c',
-				'label' => 'Ledning Details',
-				'name' => 'ledning_details',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_55472729ddff1',
-				'label' => 'Ledning Members',
-				'name' => 'ledning_members',
-				'type' => 'repeater',
-				'sub_fields' => array (
-					array (
-						'key' => 'field_554727b3ddff2',
-						'label' => 'Name',
-						'name' => 'name',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-					array (
-						'key' => 'field_55472b014d719',
-						'label' => 'Title',
-						'name' => 'title',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-					array (
-						'key' => 'field_55472805ddff3',
-						'label' => 'Picture',
-						'name' => 'picture',
-						'type' => 'image',
-						'column_width' => '',
-						'save_format' => 'url',
-						'preview_size' => 'thumbnail',
-						'library' => 'all',
-					),
-					array (
-						'key' => 'field_55472aed4d718',
-						'label' => 'Bio',
-						'name' => 'bio',
-						'type' => 'textarea',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'maxlength' => '',
-						'rows' => '',
-						'formatting' => 'br',
-					),
-				),
-				'row_min' => '',
-				'row_limit' => '',
-				'layout' => 'table',
-				'button_label' => 'Add Row',
-			),
-			array (
-				'key' => 'field_55474fc8a58b4',
-				'label' => 'Ledning Anchor',
-				'name' => 'ledning_anchor',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_554763a7cfdb4',
-				'label' => 'Styrelse',
-				'name' => '',
-				'type' => 'tab',
-			),
-			array (
-				'key' => 'field_55472ca657c0f',
-				'label' => 'Styrelse Title',
-				'name' => 'styrelse_title',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_55472c7157c0d',
-				'label' => 'Styrelse Details',
-				'name' => 'styrelse_details',
-				'type' => 'wysiwyg',
-				'default_value' => '',
-				'toolbar' => 'full',
-				'media_upload' => 'yes',
-			),
-			array (
-				'key' => 'field_55472b7457c07',
-				'label' => 'Styrelse Members',
-				'name' => 'styrelse_members',
-				'type' => 'repeater',
-				'sub_fields' => array (
-					array (
-						'key' => 'field_55472b9657c08',
-						'label' => 'Name',
-						'name' => 'name',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-					array (
-						'key' => 'field_55472bd557c0b',
-						'label' => 'Title',
-						'name' => 'title',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-					array (
-						'key' => 'field_55472bae57c09',
-						'label' => 'Picture',
-						'name' => 'picture',
-						'type' => 'image',
-						'column_width' => '',
-						'save_format' => 'url',
-						'preview_size' => 'thumbnail',
-						'library' => 'all',
-					),
-					array (
-						'key' => 'field_55472bc457c0a',
-						'label' => 'Bio',
-						'name' => 'bio',
-						'type' => 'textarea',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'maxlength' => '',
-						'rows' => '',
-						'formatting' => 'br',
-					),
-				),
-				'row_min' => '',
-				'row_limit' => '',
-				'layout' => 'table',
-				'button_label' => 'Add Row',
-			),
-			array (
-				'key' => 'field_55474fe6a58b5',
-				'label' => 'Styrelse Anchor',
-				'name' => 'styrelse_anchor',
-				'type' => 'text',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'template-team.php',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'acf_after_title',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-				0 => 'discussion',
-				1 => 'comments',
-				2 => 'send-trackbacks',
-			),
-		),
-		'menu_order' => 0,
-	));
-}
-
-if(function_exists("register_field_group"))
-{
-	register_field_group(array (
 		'id' => 'acf_about-page-fields',
 		'title' => 'About Page Fields',
 		'fields' => array (
@@ -540,6 +268,19 @@ if(function_exists("register_field_group"))
 				'layout' => 'table',
 				'button_label' => 'Add Row',
 			),
+			array (
+				'key' => 'field_55758a3f271af',
+				'label' => 'Sort Order',
+				'name' => 'sort_order',
+				'type' => 'number',
+				'default_value' => 0,
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => 1,
+			),
 		),
 		'location' => array (
 			array (
@@ -547,6 +288,42 @@ if(function_exists("register_field_group"))
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'bolag',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_footer-options',
+		'title' => 'Footer Options',
+		'fields' => array (
+			array (
+				'key' => 'field_556dbea5b97c0',
+				'label' => 'Footer Text',
+				'name' => 'footer_text',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
@@ -612,39 +389,6 @@ if(function_exists("register_field_group"))
 				6 => 'featured_image',
 				7 => 'categories',
 				8 => 'tags',
-			),
-		),
-		'menu_order' => 0,
-	));
-	register_field_group(array (
-		'id' => 'acf_post-fields',
-		'title' => 'Post Fields',
-		'fields' => array (
-			array (
-				'key' => 'field_5548a8a5e8124',
-				'label' => 'Hero Background Image',
-				'name' => 'hero_background_image',
-				'type' => 'image',
-				'save_format' => 'object',
-				'preview_size' => 'thumbnail',
-				'library' => 'all',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'post',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
 			),
 		),
 		'menu_order' => 0,
