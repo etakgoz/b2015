@@ -247,28 +247,6 @@ if(function_exists("register_field_group"))
 				'library' => 'all',
 			),
 			array (
-				'key' => 'field_55474ce46504c',
-				'label' => 'Gallery Pictures',
-				'name' => 'gallery_pictures',
-				'type' => 'repeater',
-				'sub_fields' => array (
-					array (
-						'key' => 'field_55474cfa6504d',
-						'label' => 'Picture',
-						'name' => 'picture',
-						'type' => 'image',
-						'column_width' => '',
-						'save_format' => 'object',
-						'preview_size' => 'thumbnail',
-						'library' => 'all',
-					),
-				),
-				'row_min' => '',
-				'row_limit' => '',
-				'layout' => 'table',
-				'button_label' => 'Add Row',
-			),
-			array (
 				'key' => 'field_55758a3f271af',
 				'label' => 'Sort Order',
 				'name' => 'sort_order',
